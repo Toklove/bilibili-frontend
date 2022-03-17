@@ -8,7 +8,7 @@
         <ChannelIcon icon="fa-cube" text="频道" />
       </div>
       <a-row :gutter="24" class="channel-right">
-        <a-col :span="18">
+        <a-col :span="20">
           <a-row :gutter="24" class="left">
             <a-col
               v-for="item in channelLink"
@@ -20,8 +20,8 @@
             </a-col>
           </a-row>
         </a-col>
-        <a-col :span="6">
-          <a-row :gutter="24">
+        <a-col :span="4">
+          <a-row :gutter="40">
             <a-col v-for="item in channelLinkRight" :span="8">
               <ChannelLink :text="item.context" />
             </a-col>
@@ -33,9 +33,16 @@
       <a-col :span="9">
         <Banner style="border-radius: 6px" />
       </a-col>
-      <a-col :span="15"></a-col>
+      <a-col :span="15">
+        <a-row :gutter="24">
+          <a-col v-for="item in 8" :span="6">
+            <VideoCard />
+          </a-col>
+        </a-row>
+      </a-col>
     </a-row>
   </div>
+  <Footer />
 </template>
 
 <script lang="ts" setup>
@@ -44,7 +51,9 @@ import Header from "@c/Index/Header.vue";
 import ChannelIcon from "@c/Index/Channel-Icon.vue";
 import ChannelLink from "@c/Index/Channel-Link.vue";
 import Banner from "@c/Index/Banner.vue";
+import Footer from "@c/Index/Footer.vue";
 import { menuObj } from "../../types/interface";
+import VideoCard from "@c/Index/Video-Card.vue";
 
 const channelLink: Array<menuObj> = [
   { context: "番剧", url: "/" },
@@ -77,6 +86,7 @@ const channelLinkRight: Array<menuObj> = [
 <style lang="scss" scoped>
 .header-channel {
   display: flex;
+  align-items: center;
 
   .channel-icons {
     display: flex;

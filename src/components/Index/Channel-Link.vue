@@ -20,5 +20,9 @@ defineProps({
   width: 100%;
   text-align: center;
   margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #f6f7f8;
+  color: #61666D;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <n-carousel autoplay show-arrow>
+  <n-carousel autoplay show-arrow style="height: 45vh">
     <img
       class="carousel-img"
       src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
@@ -26,7 +26,7 @@ import { NCarousel } from "naive-ui";
 <style scoped>
 .carousel-img {
   width: 100%;
-  height: 45vh;
+  height: 100%;
   object-fit: cover;
 }
 </style>
